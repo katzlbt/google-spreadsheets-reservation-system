@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <base target="_top">
+    <?!= getCSS()?>
+  </head>
+   
+   <body>
+     <div id="page" >
+        <h2><?= header ?></h2>
+        
+      <form>
+        <label for="dtime">Gewünschtes Datum und Startzeit</label>
+        <input id="dtime" type="text" disabled="1" value="computed" />
+    
+        <label for="email">Email (öffentlich sichtbar in der Tabelle)</label>
+        <input id="email" type="text" disabled="1" name="email" value="<?= email ?>" />
+        
+        <label for="storno">Link zum Stornieren (kopieren und aufheben!)</label>
+        <input id="storno" type="text" disabled="1" name="storno" value="<?=this_url?>?<?= cancel_params ?>" />
+        
+        <a href="https://calendar.google.com/calendar/r/eventedit?text=WBSC%203D%20Runde&dates=<?= google_date ?>">Im eigenen Google Calendar eintragen ...</a>
+       </form>  
+       <p><?!= msg ?></p>       
+     </div>
+ 
+    <script>
+    document.getElementById("dtime").value = (new Date("<?= date ?>")).toLocaleString("de-AT",{"dateStyle":"full", "timeStyle":"short"});
+    </script>
+ </body>
+</html>

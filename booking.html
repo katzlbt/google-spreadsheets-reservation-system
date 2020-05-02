@@ -1,0 +1,32 @@
+<html>
+  <head>    
+    <base target="_top">
+    <?!= getCSS()?>
+  </head>
+  
+  <body>
+    <div id="page" >
+      
+      <h2>WBSC Parcour Reservierung</h2>
+
+      <form action="<?=this_url?>" method="post">
+        <input type="hidden" name="date" value="<?= date ?>" />
+        <input type="hidden" name="row" value="<?= row ?>" />
+        <input type="hidden" name="col" value="<?= col ?>" />
+       
+        <label for="dtime">Gewünschtes Datum und Startzeit</label>
+        <input id="dtime" type="text" disabled="1" value="computed" />
+    
+        <label for="email">Name oder Email (öffentlich sichtbar in Tabelle)</label>
+        <input id="email" type="text" name="email" value="<?= email ?>" pattern="[[-A-Za-z0-9@. ]{7,}" title="Bitte eine Email oder einen Namen eingeben."/>
+        <!-- HTML5 validation does not work in sandbox https://stackoverflow.com/questions/22268555/input-pattern-attribute-not-working-when-served-using-google-htmlservice?noredirect=1&lq=1 -->
+      
+        <input type="submit" name="submit" value="Reservieren" id="submit" class="submitbutton" style="font-size:40px;" />
+      </form>
+      
+    </div>
+    <script>
+    document.getElementById("dtime").value = (new Date("<?= date ?>")).toLocaleString("de-AT",{"dateStyle":"full", "timeStyle":"short"});
+    </script>
+  </body>
+</html>
