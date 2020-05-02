@@ -5,7 +5,7 @@ This script relies on your users to be honest and enter their own name. Data pro
 
 TODO: Add a simple password to the form to prevent any user with a Google-Account to make a "fun" reservation. Otherwise the sheet is only proteccted by whoever has the link.
 
-The script is set up to use the standard Template from the "Personal" section - select the “Schedule” template. Then use Tools and Scripteditor and add the files in this project. Change the constants in the 2 scripts. Rename the sheet to "Appointments". Write RESET in Column A at 8:00 and run the InitResetCancel.gs script's create_hyperlinks(). Then publish as web-application. See original blog for more hints on install and permissions.
+The script is set up to use the standard Template from the "Personal" section - select the “Schedule” template (you can copy multiple weeks below each other. Each week can be managed separately. Then use Tools and Scripteditor and add the files in this project. Change the constants in the 2 scripts. Rename the sheet to "Appointments". Write RESET in Column A at 8:00 and run the InitResetCancel.gs script's create_hyperlinks(). Then publish as web-application. See original blog for more hints on install and permissions.
 
 This script was created for managing COVID-19 access/overcrowding restrictions for small outdoor sport clubs. The original idea is from: http://collaborative-tools-project.blogspot.com/2014/02/a-simple-example-booking-project-in.html 
 
